@@ -35,14 +35,16 @@
                 <div class="col-md-12" style="text-align: center">
                         <h1 class="home-box" style="color: white">Hello!..welcome to my resume page</h1>
                         <h5  class="home-box" >please enter your name</h3>
-                        <div action="{{ route('view_resume') }}" method="get">
+                        <form action="{{ route('view_resume') }}" method="get">
                             @csrf
                             <input name="name" type="text" style="padding: 5px" required autof><br>
                             @error('name')
                             <p class="text-danger">{{ $message }}</p>
                          @enderror
+                         <input name="chrome-autofill-dummy1" style='display:none' disabled/>
+                         <input name="chrome-autofill-dummy2" style='display:none' disabled/>
                             <button type="submit"  class="btn btn-success home-box"  style="margin-bottom: 20px">View Resume</button>
-                        </div>   
+                        </form>   
                     
                      
 
