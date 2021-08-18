@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
+    @livewireStyles()
 </head> 
 
 <body>
@@ -31,11 +32,11 @@
     <div class="wrapper mt-lg-5">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h1 style="color: white">Hello!..welcome to my resume page</h1>
-                     <h5>please enter your name</h3>
-                     <input type="text"><br>
-                     <button class="btn btn-success">View Resume</button>
+                <div class="col-md-12" style="text-align: center">
+                    <h1 class="home-box" style="color: white">Hello!..welcome to my resume page</h1>
+                     <h5  class="home-box" >please enter your name</h3>
+                     <input wire:model="name" type="text" style="padding: 5px"><br>
+                     <a href="" wire:click='viewResume' class="btn btn-success home-box" v style="margin-bottom: 20px">View Resume</a>
 
                 </div>
 
@@ -52,7 +53,7 @@
             <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">George Diepiriye</a> for developers</small>
         </div><!--//container-->
     </footer><!--//footer-->
-        
+  @livewireScripts()      
 </body>
 </html> 
 

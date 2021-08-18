@@ -7,7 +7,15 @@ use Illuminate\Http\Request;
 class WelcomeController extends Controller
 {
     //
+    public $name;
+
+
     public function index(){
-        return view('welcome',compact($name));
+        return view('welcome');
+    }
+
+    public function viewResume(){
+        Session::put('name', $name);
+        return redirect('resume');
     }
 }
