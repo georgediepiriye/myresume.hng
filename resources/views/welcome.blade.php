@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/orbit-1.css">
-  
+  @livewireStyles()
 </head> 
 
 <body>
@@ -36,7 +36,11 @@
                         <h1 class="home-box" style="color: white">Hello!..welcome to my resume page</h1>
                         <h5  class="home-box" >please enter your name</h3>
                         <form action="{{ route('view_resume') }}" method="get">
-                            <input name="name" type="text" style="padding: 5px"><br>
+                            @csrf
+                            <input name="name" type="text" style="padding: 5px" required><br>
+                            @error('name')
+                            <p class="text-danger">{{ $message }}</p>
+                         @enderror
                             <button type="submit"  class="btn btn-success home-box"  style="margin-bottom: 20px">View Resume</button>
                         </form>   
                     
@@ -57,7 +61,7 @@
             <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">George Diepiriye</a> for developers</small>
         </div><!--//container-->
     </footer><!--//footer-->
-    
+   @livewireScripts() 
 </body>
 </html> 
 

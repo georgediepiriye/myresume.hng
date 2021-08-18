@@ -30,6 +30,13 @@
             <h5 style="margin-left: 10px;">Hello <span>{{ Str::ucfirst(session()->get('name') ) }}</span>, here's my resume</h5>
             
         @endif
+        @if (session()->has('message'))
+        <div style="margin-left: 10px;" class="alert alert-success" role="alert">
+            {{ Session::get('message') }}
+
+        </div>
+        
+    @endif
      
         
 
@@ -86,9 +93,16 @@
 
             <div class="interests-container container-block" style="border: 2px solid white;">
                 <h2 class="container-block-title">Contact Me</h2>
-                <form action="" method="POST">
-                    <input name="email" type="email" placeholder="Enter email" style="padding: 5px;;width:220px; ">
-                    <textarea name="message" placeholder="Enter message here" style="width:220px;margin-top:10px; padding-left:5px;padding-top:5px;"></textarea>
+                <form action="{{ route('send_message') }}" method="POST">
+                    @csrf
+                    <input name='email' type="email" placeholder="Enter email" style="padding: 5px;;width:220px;" required>
+                    @error('email')
+                       <p class="text-danger">{{ $message }}</p>
+                    @enderror
+                    <textarea name='text' placeholder="Enter message here" style="width:220px;margin-top:10px; padding-left:5px;padding-top:5px;" required></textarea>
+                    @error('text')
+                    <p class="text-danger">{{ $message }}</p>
+                 @enderror
                     <button type="submit" class="btn btn-success" style="margin-top:10px;">Send</button>    
 
                 </form>

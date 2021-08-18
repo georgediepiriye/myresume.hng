@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 Route::get('view_resume',[WelcomeController::class,'viewResume'])->name('view_resume');
 Route::get('resume',[WelcomeController::class,'showResume'])->name('resume');
+Route::post('send_message',[WelcomeController::class,'sendMessage'])->name('send_message');
