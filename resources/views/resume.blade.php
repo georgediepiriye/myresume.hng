@@ -49,7 +49,6 @@
                     <li class="linkedin"><i class="fab fa-linkedin-in"></i><a href="https://www.linkedin.com/in/georgediepiriye/" target="_blank">linkedin.com/in/georgediepiriye</a></li>
                     <li class="github"><i class="fab fa-github"></i><a href="github.com/georgediepiriye" target="_blank">github.com/georgediepiriye</a></li>
                     <li class="twitter"><i class="fab fa-twitter"></i><a href="#" target="_blank">@georgeDiepiriye</a></li>
-                    <li><a href="" style="text-decoration: none" class="btn btn-success"> Contact Me</a> </li>
                 </ul>
             </div><!--//contact-container-->
             <hr>
@@ -83,6 +82,16 @@
                     <li>Watching Movies</li>
                     <li>Going Swimming</li>
                 </ul>
+            </div><!--//interests-->
+
+            <div class="interests-container container-block" style="border: 2px solid white;">
+                <h2 class="container-block-title">Contact Me</h2>
+                <form action="" method="POST">
+                    <input name="email" type="email" placeholder="Enter email" style="padding: 5px;;width:220px; ">
+                    <textarea name="message" placeholder="Enter message here" style="width:220px;margin-top:10px; padding-left:5px;padding-top:5px;"></textarea>
+                    <button type="submit" class="btn btn-success" style="margin-top:10px;">Send</button>    
+
+                </form>
             </div><!--//interests-->
             
         </div><!--//sidebar-wrapper-->
