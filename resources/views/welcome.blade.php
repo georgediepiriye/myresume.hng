@@ -35,7 +35,7 @@
                 <div class="col-md-12" style="text-align: center">
                         <h1 class="home-box" style="color: white">Hello!..welcome to my resume page</h1>
                         <h5  class="home-box" >please enter your name</h3>
-                        <form action="{{ route('view_resume') }}" method="post" autocomplete=on>
+                        <form action="{{ route('view_resume') }}" method="post" autocomplete=off>
                             @csrf
                             <input name="name" type="text" style="padding: 5px" required autof><br>
                             @error('name')

@@ -93,7 +93,7 @@
 
             <div class="interests-container container-block" style="border: 2px solid white;">
                 <h2 class="container-block-title">Contact Me</h2>
-                <form action="{{ route('send_message') }}" method="POST" autocomplete=on>
+                <form action="{{ route('send_message') }}" method="POST" autocomplete=off>
                     @csrf
                     <input name='email' type="email" placeholder="Enter email" style="padding: 5px;;width:220px;" required>
                     @error('email')
