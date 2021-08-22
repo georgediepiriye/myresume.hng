@@ -27,7 +27,7 @@
         <img class="nav-logo" src="assets/images/hng.png" />
         <img class="nav-logo" src="assets/images/zuri.png" style="float:right" />
        
-            <h5 style="margin-left: 10px;">Hello!, here's my resume</h5>
+            <h5 style="margin-left: 10px;">Hello! here's my resume</h5>
             
         
         @if (session()->has('message'))
